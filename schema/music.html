@@ -27,9 +27,9 @@
           <a class="brand" href="#">Shemas</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="index.html">Inicio</a></li>
+              <li><a href="index.html">Inicio</a></li>
               <li><a href="events.html">Events</a></li>
-              <li><a href="music.html">Music</a></li>
+              <li class="active"><a href="music.html">Music</a></li>
               <li><a href="person.html">Person</a></li>
               <li><a href="product.html">Product</a></li>
               <li><a href="recipe.html">Recipe</a></li>
@@ -40,9 +40,35 @@
       </div>
     </div>
     <div class="container">
-      <h1>Schemas</h1>
-      <p>Teste com <a href="http://www.google.com/webmasters/tools/richsnippets" target="_blank">Ferramenta de teste de dados estruturados</a> os códigos baseados em 
-        <a href="http://schema.org" target="_blank">schema.org</a>. No momento, sem formatação no HTML, porém o código fonte gera o Snippet na busca do Google</p>
+      <div itemscope itemtype="http://schema.org/MusicGroup">
+
+        <h1 itemprop="name">Foo Fighters</h1>
+
+        <h2>Songs</h2>
+
+        <div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
+          <span itemprop="name">Rope</span>
+          <meta itemprop="url" content ="foo-fighters-rope.html">
+          Length: <meta itemprop="duration" content="PT4M5S">4:05 -
+          14300 plays<meta itemprop="interactionCount" content="UserPlays:14300" />
+          <a href="foo-fighters-rope-play.html" itemprop="audio">Play</a>
+          <a href="foo-fighters-rope-buy.html" itemprop="offers">Buy</a>
+          From album: <a href="foo-fighters-wasting-light.html"
+                         itemprop="inAlbum">Wasting Light</a>
+        </div>
+
+        <div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
+          <span itemprop="name">Everlong</span>
+          <meta itemprop="url" content ="foo-fighters-everlong.html">
+          Length: <meta itemprop="duration" content="PT6M33S">6:33 -
+          <span itemprop="playCount">11700</span> plays
+          <a href="foo-fighters-everlong-play.html" itemprop="audio">Play</a>
+          <a href="foo-fighters-everlong-buy.html" itemprop="offers">Buy</a>
+          From album: <a href="foo-fighters-color-and-shape.html"
+                         itemprop="inAlbum">The Color And The Shape</a>
+        </div>
+
+      </div>
     </div>
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script>window.jQuery || document.write("<script src='js/jquery.min.js'>\x3C/script>")</script>

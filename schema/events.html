@@ -27,8 +27,8 @@
           <a class="brand" href="#">Shemas</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="index.html">Inicio</a></li>
-              <li><a href="events.html">Events</a></li>
+              <li><a href="index.html">Inicio</a></li>
+              <li class="active"><a href="events.html">Events</a></li>
               <li><a href="music.html">Music</a></li>
               <li><a href="person.html">Person</a></li>
               <li><a href="product.html">Product</a></li>
@@ -40,9 +40,31 @@
       </div>
     </div>
     <div class="container">
-      <h1>Schemas</h1>
-      <p>Teste com <a href="http://www.google.com/webmasters/tools/richsnippets" target="_blank">Ferramenta de teste de dados estruturados</a> os códigos baseados em 
-        <a href="http://schema.org" target="_blank">schema.org</a>. No momento, sem formatação no HTML, porém o código fonte gera o Snippet na busca do Google</p>
+      <div itemscope itemtype="http://schema.org/MusicGroup">
+
+        <h1 itemprop="name">Foo Fighters</h1>
+
+        <h2>Upcoming shows</h2>
+
+        <div itemprop="event" itemscope itemtype="http://schema.org/Event">
+          <a href="foo-fighters-may20-fedexforum" itemprop="url">
+            <span itemprop="name">FedExForum</span>
+          </a>
+          <span itemprop="location">Memphis, TN, US</span>
+          <meta itemprop="startDate" content="2011-05-20">May 20
+          <a href="ticketmaster.com/foofighters/may20-2011" itemprop="offers">Buy tickets</a>
+        </div>
+
+        <div itemprop="event" itemscope itemtype="http://schema.org/Event">
+          <a href="foo-fighters-may23-midamericacenter" itemprop="url">
+            <span itemprop="name">Mid America Center</span>
+          </a>
+          <span itemprop="location">Council Bluffs, IA, US</span>
+          <meta itemprop="startDate" content="2011-05-23">May 23
+          <a href="ticketmaster.com/foofighters/may23-2011" itemprop="offers">Buy tickets</a>
+        </div>
+
+      </div>
     </div>
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script>window.jQuery || document.write("<script src='js/jquery.min.js'>\x3C/script>")</script>
