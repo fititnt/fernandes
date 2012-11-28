@@ -55,3 +55,12 @@ http://microformats.org/about
 
 "The Microformats website is a good place to learn about the basics of the simplest way of publishing structured data on the Web. Microformats have been under development since 2004. The markup works in all versions of HTML and allows you to mark up basic concepts like people, places, events, recipes, and audio."
 
+### WAI-ARIA
+WAI-ARIA 1.0 Authoring Practices: http://www.w3.org/WAI/PF/aria-practices (Excelente, *deve* ser lido)
+
+Infografo: http://www.w3.org/TR/wai-aria/rdf_model.svg
+
+Exemplos de código acessível WAI-ARIA http://www.oaa-accessibility.org/examples/
+
+Adding WAI-ARIA Landmarks to Joomla: http://pbwebdev.com/blog/adding-wai-aria-landmarks-to-joomla#.ULWmRod9I2w
+
