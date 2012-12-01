@@ -1,4 +1,21 @@
-# Reposorio de trabalho para testes com Twitter Bootstrap
+# Pesquisa de técnicas aplicadas para projetos Web
+
+## O que possui
+
+### Pasta backend/
+Pasta para conter pacotes que requerem codigo para ser interpretado por um servidor e que servem como apoio para realizar tarefas que não são possíveis em HTML e Javascript puros
+
+### Pasta exemplo/
+Exemplos de projetos mais próximos do real usando técnicas estudadas
+
+### Pasta ola/
+Possui apenas um "ola mundo" em Twitter Boostrap
+
+### Pasta schema/
+Exemplos de Schemas do http://schema.org
+
+### Pasta wai-aria/
+Exemplos referentes a WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications). Saiba mais em http://www.w3.org/WAI/intro/aria.php
 
 ## Acesso a maquina local de testes
 

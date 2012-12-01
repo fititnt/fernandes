@@ -1,0 +1,1 @@
+Pasta para conter pacotes que requerem codigo para ser interpretado por um servidor e que servem como apoio para realizar tarefas que não são possíveis em HTML e Javascript puros
