@@ -1,0 +1,1 @@
+Pasta para conter exemplos de integração de plugins de terceiros

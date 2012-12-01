@@ -2,6 +2,9 @@
 
 ## O que possui
 
+### Pasta 3rd/
+Pasta para conter exemplos de integração de plugins de terceiros
+
 ### Pasta backend/
 Pasta para conter pacotes que requerem codigo para ser interpretado por um servidor e que servem como apoio para realizar tarefas que não são possíveis em HTML e Javascript puros
 
