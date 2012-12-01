@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WAI-ARIA Lardmark minimo</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      [role] {
+        border: solid silver;
+      }
+      [role]:before {
+        content: "role: " attr(role);
+      }
+      /* 
+      [role="banner"] {
+        background-color: #999;
+        width: 100%;
+      }
+      [role="navigation"] {
+        min-height: 3em;
+      }
+      [role="navigation"] li {
+        float: left;
+        margin-left: 1em;
+        list-style-type: none
+      }
+      [role="navigation"] ul {
+        min-height: 1em;
+        clear: left;
+      }
+      [role="main"] {
+        float: left;
+        width: 70%;
+      }
+      .container {
+        clear: both;
+      }
+      article {
+        float: left;
+        width: 33%;
+      }*/
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div role="banner">
+        <h1>WAI-ARIA Lardmark minimo</h1>
+      </div>
+      <nav role="navigation">
+        <h2>Navegação principal</h2>
+        <ul>
+          <li><a href="#">Link A</a>
+          <li><a href="#">Link B</a>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <section role="main">
+        <h2>Conteudo</h2>
+        <article>
+          <h2>Conteudo A</h2>
+        </article>
+        <article>
+          <h2>Conteudo B</h2>
+        </article>
+        <article>
+          <h2>Conteudo C</h2>
+        </article>
+      </section>
+      <aside role="complementary">
+        <h2>Conteudo complementar</h2>
+        <div id="search" role="search">
+          <input type="text" name="search"/>
+        </div>
+      </aside>
+    </div>
+
+    <footer role="contentinfo">
+      <h2>Rodape</h2><!-- Footer não precisa de heading! Opcional-->
+    </footer>
+  </body>
+</html>

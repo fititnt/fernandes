@@ -84,3 +84,5 @@ Exemplos de código acessível WAI-ARIA http://www.oaa-accessibility.org/example
 
 Adding WAI-ARIA Landmarks to Joomla: http://pbwebdev.com/blog/adding-wai-aria-landmarks-to-joomla#.ULWmRod9I2w
 
+Using WAI ARIA Landmark Roles: http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/
+
