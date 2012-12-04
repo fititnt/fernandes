@@ -40,6 +40,11 @@ http://jigsaw.w3.org/css-validator/
 Infelizmente, as CSS do Twitter Boostrap geram invalidação de diversas regras de CSS3, também em função de fallback. *Um exemplo de tal quantidade 
 é 691*. Procurar não gerar erros adicionais aos que a própria biblioteca já gera
 
+### Validação Cache Manifest
+http://manifest-validator.com/
+
+Validador de arquivo manifesto (para sites funcionarem offline)
+
 ### Google Rich Snippet Tool (Ferramenta de teste de dados estruturados)
 http://www.google.com/webmasters/tools/richsnippets
 
@@ -66,7 +71,10 @@ http://structured-data.org
 Otimos recursos sobre o tema
 
 ### Microdata
-http://diveintohtml5.info/extensibility.html
+http://diveintohtml5.com.br/extensibility.html (em português) 
+
+### Rich snippets (microdados, microformatos, RDFa, e marcador de dados)
+http://support.google.com/webmasters/bin/answer.py?hl=pt-BR&answer=99170
 
 "The chapter on Microdata in the Dive into HTML5 book is a good introduction to the next generation of Microformats. Microdata is the newest addition to the structured data markup technologies, created in 2009, and is supported in HTML5."
 
