@@ -1,0 +1,9 @@
+/* WAI ARIA Lankmarks (atributo role) */
+[role]:before {
+  content: "role: " attr(role);
+}
+
+/* Teclas de acesso rápido (accesskeys) */
+[accesskey]:after {
+  content: ' [' attr(accesskey) ']';
+}
