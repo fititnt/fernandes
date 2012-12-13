@@ -1,0 +1,19 @@
+
+<ifModule mod_rewrite.c>
+  
+  # Bloquear crawler de Mecanismos de busca. Infelizmente desativa também ferramentas que obtem snippet :(
+  #RewriteEngine On
+  #RewriteCond %{HTTP_USER_AGENT} (googlebot|bingbot|Baiduspider) [NC]
+  #RewriteRule .* - [R=403,L]
+</ifModule>
+
+# Controle de Headers. Mesmo que um crawler ou usuario tenha acessado, informa headers adicionais
+<ifModule mod_headers.c>
+  Header set X-Robots-Tag "noindex"
+  # Header unset ETag
+  # Header set P3P 'policyref="/w3c/p3p.xml"'
+  #<FilesMatch ".(php|htm|html|doc|pdf|png|jpe?g|gif)$">
+  #  Header set X-Robots-Tag "noindex"
+  #</FilesMatch>
+</ifModule>
+
