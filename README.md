@@ -45,6 +45,13 @@ http://manifest-validator.com/
 
 Validador de arquivo manifesto (para sites funcionarem offline)
 
+### Validação WCAG 2.0 (AccessMonitor)
+
+http://www.acessibilidade.gov.pt/accessmonitor/
+
+### Validação WCAG 1.0 (eXaminator)
+http://www.acessibilidade.gov.pt/webax/examinator.php
+
 ### Google Rich Snippet Tool (Ferramenta de teste de dados estruturados)
 http://www.google.com/webmasters/tools/richsnippets
 
