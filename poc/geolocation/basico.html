@@ -6,10 +6,108 @@
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <h1>Geolocalization - Basic</h1>
+    <div class="container">
+      <header>
+        <h1>Geolocalization - Basic</h1>
+      </header>
+      <article>
+        <h2>Coordenadas</h2>
+        <dl>
+          <dt>Latitude
+          <dd id="latitude">
+          <dt>Longitude
+          <dd id="longitude">
+        </dl>
+      </article>
+    </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!-- jQuery Fallback caso teste offline ou servidor do jQuery esteja offline -->
     <script>window.jQuery || document.write("<script src='../../assets/js/jquery.min.js'>\x3C/script>")</script>
     <script src="../../assets/js/bootstrap.min.js"></script>
+    <script>
+      
+      var Geolocation = {};
+
+
+      Geolocation = (function () {
+        'use strict';
+
+        //private variables
+        var privateVarA = 'Private A';
+        //private methods
+
+        //public
+        return {
+          publicVarA: 1,
+
+          publicVarB: ['a', 'b', 'd'],
+
+          publicMethodA: function () {
+            console.log('publicMethodA!');
+          },
+
+          publicMethodB: function () {
+            console.log('publicMethodB print' + privateVarA + '!');
+          }
+        };
+      }());
+      
+      function getGeoCoords() {
+        var coords = {};
+        coords.latitude = null;
+        coords.longitude = null;
+        coords.error = null;
+        
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            coords = position;
+          },function(error) {
+            switch(error.code) 
+            {
+              case error.PERMISSION_DENIED:
+                coords.error = "User denied the request for Geolocation.";
+                break;
+              case error.POSITION_UNAVAILABLE:
+                coords.error = "Location information is unavailable."
+                break;
+              case error.TIMEOUT:
+                coords.error = "The request to get user location timed out."
+                break;
+              case error.UNKNOWN_ERROR:
+                coords.error = "An unknown error occurred."
+                break;
+            }
+            console.log(coords.error);
+          })
+          
+        }
+        
+        return coords;
+      }
+      
+      var coords = getGeoCoords();
+      
+      console.log(coords);
+      if (navigator.geolocation) {
+        document.getElementById('latitude').innerHTML = coords.latitude;
+        document.getElementById('longitude').innerHTML = coords.longitude;
+      }
+      /*
+      var x=document.getElementById("demo");
+      function getLocation()
+      {
+        if (navigator.geolocation)
+        {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        else{x.innerHTML="Geolocation is not supported by this browser.";}
+      }
+      function showPosition(position)
+      {
+        x.innerHTML="Latitude: " + position.coords.latitude + 
+          "<br>Longitude: " + position.coords.longitude;	
+      }
+       */
+    </script>
   </body>
 </html>
