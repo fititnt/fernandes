@@ -20,3 +20,14 @@ http://pttrns.com/ (focado em mobile)
 http://www.uxarchive.com (focado em mobile)
 
 http://www.mobile-patterns.com (focado em mobile)
+
+## Inspiração para UI
+
+Site de inspiração com trabalhos de designers e eventualmente até elementos de UI para download
+http://dribbble.com/
+
+Elementos de UI para download
+http://designmoo.com/
+
+Inspiração visual para UI
+http://makebetterwebsites.com/
