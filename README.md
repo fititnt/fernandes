@@ -23,6 +23,17 @@ Pasta para conter arquivos que intencionalmente devem ficar disponibilizados de 
 ### Pasta refactoring/
 Refratoração de projetos, isto é, reescrever de outro modo algo que já existe por questões didaticas ou de demonstrar para futura alteração
 
+Recomenda-se que cada subpasta seja um projeto específico e que, dentro tenha uma ordem parecida com a seguinte
+<pre>/refractoring/projeto-a #raiz do projeto
+
+/refractoring/projeto-a/live-site #Tipo de fonte, live-site para projeto pego direto da web
+/refractoring/projeto-a/live-site/original # Arquivo original usado como base
+/refractoring/projeto-a/live-site/alterado... # Outros nomes para referenciar alterações em relação ao original
+
+/refractoring/projeto-a/source/... #Tipo de fonte, source para "codigo fonte original", a exemplo dos templates usados na criação do tema para um CMS
+
+</pre>
+
 ### Pasta schema/
 Exemplos de Schemas do http://schema.org
 
