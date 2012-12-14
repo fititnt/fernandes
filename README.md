@@ -14,6 +14,15 @@ Exemplos de projetos mais próximos do real usando técnicas estudadas
 ### Pasta ola/
 Possui apenas um "ola mundo" em Twitter Boostrap
 
+### Pasta poc/
+Proof of concept (prova de conceito). Usada para demonstrar alguma capacidade ou habilidade geral. Geolocation, Offline, etc.
+
+### Pasta public_html/
+Pasta para conter arquivos que intencionalmente devem ficar disponibilizados de modo online
+
+### Pasta refactoring/
+Refratoração de projetos, isto é, reescrever de outro modo algo que já existe por questões didaticas ou de demonstrar para futura alteração
+
 ### Pasta schema/
 Exemplos de Schemas do http://schema.org
 
