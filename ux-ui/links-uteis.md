@@ -25,8 +25,9 @@ http://www.mobile-patterns.com (focado em mobile)
 
 ## Inspiração para UI
 
-### Site de inspiração com trabalhos de designers e eventualmente até elementos de UI para download
+### Site de inspiração com trabalhos de designers
 http://dribbble.com/
+(eventualmente existem elementos de UI para download)
 
 ### Elementos de UI para download
 http://designmoo.com/
