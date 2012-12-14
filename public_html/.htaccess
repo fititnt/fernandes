@@ -1,0 +1,4 @@
+<ifModule mod_headers.c>
+  # Header set X-Robots-Tag "index, follow"
+</ifModule>
+
