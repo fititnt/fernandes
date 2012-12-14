@@ -28,7 +28,7 @@ Rede externa : http://201.37.65.126:5581/f/ (IP dinamico porem a porta é a mesm
 
 ### Servidor de testes na web
 
-Dominio fernandes.lab.fititnt.org ("privado", sem intenção de ser indexado), pub.lab.fititnt.org ("indexavel", pasta public_html), 
+Dominio http://fernandes.lab.fititnt.org ("privado", sem intenção de ser indexado), http://pub.lab.fititnt.org ("indexavel", pasta public_html), 
 
 Usuario SSH: jflab
 
