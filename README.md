@@ -140,6 +140,11 @@ Adding WAI-ARIA Landmarks to Joomla: http://pbwebdev.com/blog/adding-wai-aria-la
 
 Using WAI ARIA Landmark Roles: http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/
 
+### Recomendações de Acessibilidade para Conteúdo Web (WCAG) 2.0
+http://www.ilearn.com.br/TR/WCAG20/
+
+Documentação oficial traduzida (faltam algumas partes)
+
 ## Leitores de Tela
 
 ### Orientações básicas de Jaws – NVDA – Virtual Vision - Orca em Ubuntu/Win
