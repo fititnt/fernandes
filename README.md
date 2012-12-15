@@ -83,6 +83,11 @@ http://www.acessibilidade.gov.pt/accessmonitor/
 ### Validação WCAG 1.0 (eXaminator)
 http://www.acessibilidade.gov.pt/webax/examinator.php
 
+### ASES - Avaliador e Simulador de Acessibilidade de Sítios
+http://www.governoeletronico.gov.br/acoes-e-projetos/e-MAG/ases-avaliador-e-simulador-de-acessibilidade-sitios
+
+Software criado pelo Governo que avalia acessibilidade (WCAG 1.0), HTML (4.1), CSS e constrate de cores. Também simula o tempo gasto pelo leitor de tela para chegar a cada linha do conteúdo.
+
 ### Google Rich Snippet Tool (Ferramenta de teste de dados estruturados)
 http://www.google.com/webmasters/tools/richsnippets
 
