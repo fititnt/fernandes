@@ -88,6 +88,9 @@ http://www.governoeletronico.gov.br/acoes-e-projetos/e-MAG/ases-avaliador-e-simu
 
 Software criado pelo Governo que avalia acessibilidade (WCAG 1.0), HTML (4.1), CSS e constrate de cores. Também simula o tempo gasto pelo leitor de tela para chegar a cada linha do conteúdo.
 
+### Da Silva - Avaliador de Acessibilidade (Padrão E-GOV)
+http://www.dasilva.org.br/
+
 ### Google Rich Snippet Tool (Ferramenta de teste de dados estruturados)
 http://www.google.com/webmasters/tools/richsnippets
 
