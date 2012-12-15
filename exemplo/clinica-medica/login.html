@@ -10,10 +10,35 @@
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/clinica-medica.css" rel="stylesheet" media="screen">
     <style>
-      @media (min-width: 979px) {
-        body {
-          padding-top: 60px;
-        }
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
       }
     </style>
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -26,45 +51,17 @@
   </head>
 
   <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Clinica Médica</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li><a href="index.html">Inicio</a></li>
-              <li class="active"><a href="sobre.html">Sobre</a></li>
-              <li><a href="exames.html">Exames</a></li>
-              <li><a href="contato.html">Contato</a></li>
-            </ul>
-          </div>
-
-          <div class="nav nav-pills pull-right">
-
-          </div>
-          <p class="navbar-text pull-right">
-            <a href="login.html" class="navbar-link">Autentique-se</a>
-          </p>
-
-        </div>
-      </div>
-    </div>
-
     <div class="container">
 
-      <h1>Sobre</h1>
-      <p>Lorem Ipsum</p>
-
-      <hr>
-      <footer>
-        © Clinica Médica 2012
-      </footer>
+      <form class="form-signin" action="exames.html">
+        <h1 class="form-signin-heading">Antenticação</h1>
+        <input type="text" class="input-block-level" placeholder="Usuário">
+        <input type="password" class="input-block-level" placeholder="Senha">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Lembre-me
+        </label>
+        <button class="btn btn-large btn-primary" type="submit">Entrar</button>
+      </form>
 
     </div>
 
