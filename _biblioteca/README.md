@@ -6,3 +6,6 @@ Javascripts
 
 .h2 Exemplos do Twitter Bootstrap
 Ver pasta /docs/examples para exemplos mais compledos do twitter Twitter Bootstrap, em especial carousel.html
+
+.h2 WAI-ARIA Helper
+Biblitecas em Javascript para ajudar a adaptar páginas aos padrões WAI-ARIA (solução tipicamente temporária, usar com cuidado)
