@@ -148,5 +148,20 @@ http://www.freedomscientific.com/doccenter/archives/training/JAWSKeystrokes.htm 
 ### Lista com teclas de atalho NVDA
 http://webaim.org/resources/shortcuts/nvda (em inglês)
 
+## Checklists de Acessibilidade
+http://www.renapi.gov.br/acessibilidade/ferramentas/arquivos/checklistAcessibilidade.pdf
+Checklist do RENAPI (em português)
+
+http://www.fernandopaes.ppg.br/blog/wp-content/uploads/2010/11/CheckList_Acessibilidade_FernandoPaes.xls
+Checklist em XLS (em português)
+
+http://www.governoeletronico.gov.br/biblioteca/arquivos/checklist-manual-de-acessibilidade-desenvolvedores/view
+Checklist em PDF do e-MAG para desenvolvedores (em português)
+
+http://www.governoeletronico.gov.br/biblioteca/arquivos/checklist-manual-de-acessibilidade-deficientes-visuais/view
+Checklist em PDF do e-MAG para deficientes visuais (em português)
+
+http://www.w3.org/TR/2006/WD-WCAG20-20060427/appendixB.html
+Checklist em HTML do W3C (em inglês)
 
 
