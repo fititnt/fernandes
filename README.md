@@ -147,6 +147,9 @@ Documentação oficial traduzida (faltam algumas partes)
 
 ## Leitores de Tela
 
+### Lista resumo com teclas de atalho de vários leitores
+http://acessibilidade.bento.ifrs.edu.br/dicas-leitor-de-tela.php (em português)
+
 ### Orientações básicas de Jaws – NVDA – Virtual Vision - Orca em Ubuntu/Win
 http://www.renapi.gov.br/acessibilidade/manuais/tsa/leitores_de_Tela.pdf (em português)
 
