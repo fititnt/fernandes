@@ -5,4 +5,6 @@ http://acessibilidade.bento.ifrs.edu.br/index.php
 
 Pegar o código do menu e isolá-lo para estudo.
 
-http://brunotorres.net/unsorted/accdd.html
+http://brunotorres.net/unsorted/accdd.html 
+
+http://www.456bereastreet.com/lab/accessible-expanding-collapsing-menu/
