@@ -105,6 +105,17 @@ http://foolip.org/microdatajs/live/
 
 ## Referências pertinentes
 
+### HTML 5
+
+#### Documentação oficial técnica, recomendada
+http://www.w3.org/TR/html5
+
+#### Documentação oficial para autores, simplificada mas ainda técnica
+http://dev.w3.org/html5/html-author
+
+#### WHATWG HTML5, especificação técnica para web developers
+http://developers.whatwg.org
+
 ### Schema.org
 http://schema.org/
 
