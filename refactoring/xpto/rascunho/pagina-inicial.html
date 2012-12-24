@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Xpto</title>
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="estilo.css" rel="stylesheet">
+  </head>
+  <body>
+    <div  class="container">
+      <header>
+        <section>
+          <h1>Acessibilidade</h1>
+          <h2>Navegação</h2>
+          <ul class="nav nav-pills">
+            <li><a href="#conteudo" accesskey="1">Pular para Conteúdo [1]</a>
+            <li><a href="#menu-principal" accesskey="2">Acessar menu [2]</a>
+            <li><a href="#">Pesquisar no blog [3]</a>
+          </ul>
+          <h2>Visual</h2>
+          <ul class="nav nav-pills">
+            <li><a href="#">Aumentar Fonte</a>
+            <li><a href="#">Fonte Normal</a>
+            <li><a href="#">Diminuir Fonte</a>
+            <li><a href="#">Alto Contraste</a>
+          </ul>
+        </section>
+        <nav class="navbar" role="navigation">
+          <div class="navbar-inner">
+            <div class="container">
+              
+
+            <!--            <a  class="brand" href="#">Navegação Principal</a>
+                        <h2 class="brand">Navegação Principal</h2>-->
+            <ul class="nav" id="menu-principal">
+              <li class="active"><a href="#">Inicio</a>
+              <li><a href="#">Sobre</a>
+              <li><a href="#">Clientes</a>
+              <li><a href="#">Contato</a>
+            </ul>
+            <form class="navbar-form pull-right" role="search">
+              <input type="text" name="search" placeholder="Pesquisar" id="pesquisar" accesskey="3"/>
+              <button type="submit" class="btn">Busca</button>
+            </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <h1>Titulo do site</h1>
+      <article id="conteudo" role="main">
+        <div class="hero-unit">
+          <header>
+            <figure>
+            </figure>
+            <h1>Xpto</h1>
+          </header>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin rutrum faucibus. Aliquam convallis dui ut felis porta tincidunt. Aliquam diam massa, vehicula sit amet iaculis a, dapibus varius elit. Fusce bibendum suscipit eros. Aliquam at lorem sit amet odio lobortis pellentesque. Cras sed sapien lorem. Duis gravida purus non ipsum ultricies pharetra. Donec tempor ipsum at dui bibendum eget interdum tellus tincidunt.
+        </div>
+        <div class="row">
+          <article class="span4">
+            <h2>Subgrupo A</h2>
+            Nulla in vestibulum odio. Morbi sed tellus ante. Praesent pharetra viverra diam vel tempor. Quisque sed dolor in metus venenatis tempus ut vitae metus
+          </article>
+          <article class="span4">
+            <h2>Subgrupo B</h2>
+            Nulla in vestibulum odio. Morbi sed tellus ante. Praesent pharetra viverra diam vel tempor. Quisque sed dolor in metus venenatis tempus ut vitae metus
+          </article>
+          <article class="span4">
+            <h2>Subgrupo C</h2>
+            Nulla in vestibulum odio. Morbi sed tellus ante. Praesent pharetra viverra diam vel tempor. Quisque sed dolor in metus venenatis tempus ut vitae metus
+          </article> 
+        </div>
+
+      </article>
+      <!--      <aside>
+              <section>
+                <h2>Titulo da Lateral A</h2>
+                <label>Busca</label>
+                <input type="text" name="search" id="pesquisar" accesskey="3"/>
+              </section>
+              <section>
+                <h2>Titulo da Lateral B</h2>
+                <ul>
+                  <li>
+                </ul>
+              </section>
+              <section>
+                <h2>Titulo da Lateral C</h2>
+                <ul>
+                  <li>
+                </ul>
+              </section>
+            </aside>-->
+      <footer role="contentinfo">
+        <hr>
+        <script src="../../../_biblioteca/dev/print-tools-links.js"></script>
+      </footer>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- jQuery Fallback caso teste offline ou servidor do jQuery esteja offline -->
+    <script>window.jQuery || document.write("<script src='../../../assets/js/jquery.min.js'>\x3C/script>")</script>
+    <script src="../../../assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
