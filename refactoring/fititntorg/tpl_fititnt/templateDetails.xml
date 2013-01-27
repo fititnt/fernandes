@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+	version="1.6"
+	type="template"
+	client="site">
+	<name>fititnt</name>
+	<creationDate>2011-05-18</creationDate>
+	<author>Alex Correa / Emerson Rocha Luiz</author>
+	<authorEmail>alex@flef.com.br / emerson@webdesign.eng.br </authorEmail>
+	<authorUrl>http://www.flef.com.br / http://fititnt.org</authorUrl>
+	<copyright>Copyright (C) 2005 - 2011 Alex Correa / Emerson Rocha Luiz.</copyright>
+	<license>Proprietaria</license>
+	<version>0.2.0</version>
+	<description>TPL_JUGRS_TEMA2_DESCRIPTION</description>
+	<files>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+                <filename>error.php</filename>
+                <filename>helper.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+                <filename>TODO.txt</filename>
+	</files>
+
+	<positions>
+		<position>topo</position>
+		<position>menu</position>
+		<position>busca</position>
+		<position>coluna1</position>
+		<position>coluna2</position>
+		<position>rodape</position>
+	</positions>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_fititnt.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_fititnt.sys.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.tpl_fititnt.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.tpl_fititnt.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="Social Media">
+                            
+                        </fieldset>
+                </fields>
+       </config>
+
+</extension>

@@ -1,0 +1,188 @@
+/* Layout base */
+body {
+	margin: 0px;
+	padding:0px;
+	background: #ffffff url('../images/fundo2.jpg') repeat left top;
+	color: #666666;
+}
+
+#cabecalho {
+	background: none ;
+    width: 960px;
+	height: 150px;
+}
+
+#logo {
+width: 220px;
+height: 80px;
+padding: 5px 0 0 0;
+}
+
+#componente {
+	background:none;
+}
+
+#coluna1 {
+	background:none;
+}
+
+#coluna2{
+	background:none;
+}
+
+#rodape {
+	background:none;
+	height: 50px;
+}
+
+/* tipografia */
+h1/*, #conteudo a:hover, #conteudo a:active,#conteudo a:link, #conteudo a:focus, #conteudo a:visited */{
+	font-family:  'PT Sans Caption', Helvetica, Arial, sans-serif;
+	color: #00AFEF;
+	font-size: 32px;
+	text-decoration: none;
+}
+
+h2/*, #conteudo a:hover, #conteudo a:active,#conteudo a:link, #conteudo a:focus, #conteudo a:visited */{
+	font-family: 'PT Sans Caption', Helvetica, Arial, sans-serif;
+	color: #00AFEF;
+	font-size: 24px;
+	line-height: 32px;
+	text-decoration: none;
+}
+
+h3 {
+	font-family: 'PT Sans Caption', Helvetica, Arial, sans-serif;
+	color: #F76606;
+	font-size: 18px;
+	margin: 20px 0 20px 0px;
+	text-decoration: none;
+
+}
+
+h4 {
+	font-family: 'PT Sans Caption', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	color: #00AFEF;
+	text-decoration: none;
+}
+/* fim da tipografia */
+
+/* menu */
+ 
+#menu {
+	float: right;
+	width:700px;
+	height: 40px;
+	margin:30px 0 0 0;
+	
+}
+#menu ul {
+	list-style: none;
+}
+
+#menu li {
+	float: right;
+	margin: 0 20px 0 0;
+	position: relative;
+}
+
+/* fim do menu */
+
+.titulo {
+font-family:  'PT Sans Caption', Helvetica, Arial, sans-serif;
+	color: #00AFEF;
+	font-size: 24px;
+	text-decoration: none;
+}
+/* mod search */
+#mod-search-searchword {
+    border-radius: 10px;
+    /*-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;*/
+	
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    color: #2ABAB4;
+    font-size: 14px;
+    height: 20px;
+    left: 0px;
+    margin-bottom: 8px;
+    padding: 5px;
+    position: relative;
+    width: 200px !important;
+}
+
+
+
+/* mod login */
+#modlgn-username {
+    border-radius: 10px;
+    /*-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;*/
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    color: #2ABAB4;
+    font-size: 14px;
+    height: 20px;
+    left: 0px;
+    margin-bottom: 8px;
+    padding: 5px;
+    position: relative;
+    width: 200px !important;
+}
+
+#modlgn-passwd {
+    border-radius: 10px;
+    /*-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;*/
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    color: #2ABAB4;
+    font-size: 14px;
+    height: 20px;
+    left: 0px;
+    margin-bottom: 8px;
+    padding: 5px;
+    position: relative;
+    width: 200px !important;
+}
+#login-form .button, .button:visited {
+    background-color: #ff5c00; 
+    font-size: 14px; 
+    font-weight: bold; 
+    line-height: 1; 
+    /*text-shadow: 0 -1px 1px rgba(0,0,0,0.25); */
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: #fff;
+    text-decoration: none;
+   /*-moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+   text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+   border-bottom: 1px solid rgba(0,0,0,0.25);*/
+   position: relative;
+   cursor: pointer
+  }
+.orange.button, .orange.button:visited{ background-color: #ff5c00; }
+.orange.button:hover{ background-color: #d45500; }	
+/*background: url('../images/enviar.png') no-repeat scroll 0 0 transparent;
+    border: 0 solid;
+    color: #FFFFFF;
+    float: right;
+    font-size: 16px;
+    height: 33px;
+    left: -40px;
+    padding: 4px;
+    position: relative;
+    width: 74px; 
+}*/
+#form-login-remember {
+float:right;
+padding: 10px 10px 0 0;
+}

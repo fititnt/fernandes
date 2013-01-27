@@ -1,0 +1,531 @@
+/*-----------------------------------------------------------------------------*
+							
+							Grupo: Core Joomla
+					Estilos padroes do CMS Joomla!
+		@see http://docs.joomla.org/Joomla_1.6_Core_CSS_Classes_and_IDs
+
+/*----------------------------------------------------------------------------*/
+
+/*All - Error Message*/
+.error{}
+
+/*All Menu Item Types*/
+.active{}
+.message{}
+
+/*Article - Archived */
+.actions{}
+.archive{}
+.article-info-term{}
+.button{}
+.create{}
+.createdby{}
+.element-invisible{}
+.email-icon{}
+.filters{}
+.filter-search{}
+.filter-search-lbl{}
+.inputbox{}
+.modified{}
+.published{}
+.row0{}
+.row1{}
+
+/*Article - Category Blog*/
+.actions{}
+.blog{}
+.cat-children{}
+.category-desc{}
+.category-name{}
+.edit-icon{}
+.email-icon{}
+.first{}
+.item-separator{}
+.items-leading{}
+.items-row{}
+.item-title{}
+.last{}
+.leading-n{}
+.list-author{}
+.modified{}
+.pagination{}
+.print-icon{}
+.published{}
+.subheading-category{}
+
+/*Article - Category List*/
+.category{}
+.category-desc{}
+.category-list{}
+.cat-items{}
+.cat-list-row0{}
+.cat-list-row1{}
+.clr{}
+.display-limit{}
+.element-invisible{}
+.even{}
+.filters{}
+.filter-search{}
+.filter-search-lbl{}
+.first{}
+.hits{}
+.jcat-children{}
+.item-title{}
+.last{}
+.list-author{}
+.list-date{}
+.list-hits{}
+.list-title{}
+.odd{}
+.pagination{}
+.subheading-category{}
+
+/*Article - Featured*/
+.article-info{}
+.article-info-term{}
+.blog-featured{	}
+.item-separator{}
+.items-leading{}
+.leading-n{}
+
+/*Article - List All Categories*/
+.categories-list{}
+.category-desc{}
+.first{}
+.item-title{}
+.last{}
+
+/*Article - List Category*/
+.inputbox{}
+
+/*Article - Single*/
+.actions{}
+.article-info{}
+.article-info-term{}
+.category-name{}
+.create{}
+.createdby{}
+.edit-icon{}
+.email-icon{}
+.item-page{}
+.modified{}
+.print-icon{}
+.published{}
+.readmore{}
+.readmore{}
+.row-n{}
+.row-separator{}
+.searchintro{}
+.title{}
+
+/*Article -Category Blog*/
+.clr{}
+.cols-n{}
+.column-n{}
+.article-info{}
+.article-info-term{}
+.create{}
+.createdby{}
+
+/*Contact - List All Categories*/
+.category-desc{}
+.first{}
+.item-title{}
+.last{}
+
+/*Contact - List in a Category*/
+.cat-children{}
+.category{}
+.category-desc{}
+.clr{}
+.contact-category{}
+.element-invisible{}
+.even{}
+.filters{}
+.first{}
+.hidelabeltxt{}
+.item-email{}
+.item-phone{}
+.item-position{}
+.item-title{}
+.last{}
+.only{}
+.pagination{}
+
+/*Contact - Single*/
+.contact{}
+.contact-category{}
+.contact-links{}
+.contact-name{}
+.contact-position{}
+.content{}
+.contact-address{}
+.contact-contactinfo{}
+.contact-country{}
+.contact-fax{}
+.contact-mobile{}
+.contact-postcode{}
+.contact-state{}
+.contact-suburb{}
+.contact-telephone{}
+.contact-webpage{}
+.icons-icons{}
+.pane-slider{}
+.pane-toggler{}
+.panel{}
+.contact-misc{}
+.contact-miscinfo{}
+
+
+/*Contacts - List All Categories*/
+.categories-list{}
+
+/*Feed - Single*/
+.redirect-ltr{}
+
+/*Manage Users - Edit profile*/
+.optional{}
+
+/*News Feed - List All Categories*/
+.categories-list{}
+.category-desc{}
+.first{}
+.item-title{}
+.last{}
+.item-title{}
+.cat-children{}
+.category{}
+.clr{}
+.counter{}
+.display-limit{}
+.element-invisible{}
+.even{}
+.filters{}
+.hidelabeltxt{}
+.inputbox{}
+.item-link{}
+.item-num-art{}
+.item-title{}
+.newsfeed-category{}
+.odd{}
+.pagination{}
+
+/*News Feed - Single*/
+.feed-description{}
+.feed-item-description{}
+.odd{}
+
+/*Search - List Search Results*/
+.button{}
+.category{}
+.inputbox{}
+.ordering{}
+.ordering-box{}
+.pane-sliders{}
+.phrases{}
+.phrases-box{}
+.radiobtn-all{}
+.radiobtn-any{}
+.radiobtn-exact{}
+.search{}
+.word{}
+
+/*User Manager - Edit profile*/
+.form-validate{}
+.hasTip{}
+.profile-edit{}
+.validate{}
+.validate-password{}
+.validate-username{}
+.button{}
+.login{}
+.login-description{}
+.login-fields{}
+.validate-email{}
+.validate-password{}
+.validate-username{}
+
+/*User Manager - Name Reminder*/
+.remind{}
+
+/*User Manager - password Reset*/
+.form-validate{}
+.hasTip{}
+.required{}
+.reset{}
+.validate-username{}
+
+/*User Manager - Registration*/
+.hasTip{}
+.required{}
+.validate{}
+.validate-email{}
+.validate-password{}
+.validate-username{}
+
+/*User Manager -Name Reminder*/
+.form-validate{}
+.hasTip{}
+
+/*User Manager -Reminder*/
+.validate-email{}
+
+/*User Manager Edit profile*/
+.required{}
+
+/*Weblink - List All Categories*/
+.category-desc{}
+.item-title{}
+.categories-list{}
+
+/*Weblink - List in a Category*/
+.cat-children{}
+.category{}
+.element-invisible{}
+.even{}
+.filters{}
+.hidelabeltxt{}
+.hits{}
+.num{}
+.odd{}
+.pagination{}
+.weblink-category{}
+.clr{}
+.first{}
+.last{}
+
+/*Wrapper*/
+.contentpane{}
+
+
+/*********************** CORE MODULE CLASSES ***********************/
+
+/*articles - archived*/
+.archive-module{}
+
+/*articles - newsflashes*/
+.article-separator{}
+
+/*banners*/
+.bannerfooter{}
+.bannergroup{}
+.banneritem{}
+
+/*breadcrumbs*/
+.breadcrumb{}
+
+/*login, search*/
+.button{}
+
+/*articles - categories*/
+.categories-module{}
+
+/*articles - category*/
+.category-module{}
+
+/*statistics*/
+.stats-module{}
+
+/*banners*/
+.clr{}
+
+/*news feed*/
+.feed{}
+.feed-link{}
+.feed-link{}
+
+/*language switcher*/
+.footer{}
+.header{}
+
+/*login, search*/
+.input{}
+.inputbox{}
+
+/*********************** CORE COMPONENTS ID ***********************/
+
+/*Articles - Archived*/
+#archive-items{}
+#filter-search{}
+#jForm{}
+#limit{}
+#month{}
+#navigation{}
+#year{}
+
+/*Articles - Category List*/
+#filter-search{}
+#limit{}
+#tableOrdering{}
+#tableOrdering2{}
+#tableOrdering3{}
+#tableOrdering4{}
+
+/*Contact - Single*/
+#basic-details{}
+#contact-slider{}
+#display-links{}
+#display-misc{}
+
+/*News Feed - List in a Category*/
+#limit{}
+#tableOrdering{}
+#tableOrdering2{}
+#tableOrdering3{}
+
+/*Other - List Search Results*/
+#area_categories{}
+#area_contacts{}
+#area_content{}
+#area_newsfeeds{}
+#area_weblinks{}
+#ordering{}
+#search_searchword{}
+#searchForm{}
+#searchphraseall{}
+#searchphraseall-lbl{}
+#searchphraseany{}
+#searchphraseany-lbl{}
+#searchphraseexact{}
+#searchphraseexact-lbl{}
+
+/*User Manager - Edit Profile*/
+#jform_email1{}
+#jform_email1-lbl{}
+#jform_email2{}
+#jform_email2-lbl{}
+#jform_id{}
+#jform_name{}
+#jform_name-lbl{}
+#jform_password1{}
+#jform_password1-lbl{}
+#jform_password2{}
+#jform_password2-lbl{}
+#jform_username{}
+#jform_username-lbl{}
+#member-profile{}
+
+/*User Manager - Login*/
+#password{}
+#password-lbl{}
+#username{}
+#username-lbl{}
+
+/*User Manager - PW Reset*/
+#jform_username{}
+#jform_username-lbl{}
+#user-registration{}
+
+/*User Manager - Registraton*/
+#jform_email1{}
+#jform_email1-lbl{}
+#jform_email2{}
+#jform_email2-lbl{}
+#jform_name{}
+#jform_name-lbl{}
+#jform_password1{}
+#jform_password1-lbl{}
+#jform_password2{}
+#jform_password2-lbl{}
+#jform_username{}
+#jform_username-lbl{}
+#member-registration{}
+
+/*User Manager - View Profile*/
+#users-profile-core{}
+#users-profile-custom{}
+
+/*User Manager -Name Reminder*/
+#jform_email{}
+#jform_email-lbl{}
+#user-registration{}
+
+
+/*********************** CORE MODULES ID ***********************/
+
+/*Login*/
+#form-login-password{}
+#form-login-remember{}
+#form-login-username{}
+#modlgn_passwd{}
+#modlgn_remember{}
+#modlgn_username{}
+
+/*Search*/
+#mod_search_searchword{}
+
+/*Wrapper*/
+#blockrandom{}
+
+
+
+/*-----------------------------------------------------------------------------*
+							
+							Grupo: Sobreposicao padrao
+						Alteracoes tipicas em template Joomla
+
+/*----------------------------------------------------------------------------*/
+
+/*
+			Menus
+*/
+ul.menu, ul.menu li {
+	list-style-type: none;
+}
+ul.menu a {
+    display: block;
+    text-decoration: none;
+	color: #00AFEF;
+    padding: 5px 0;
+
+}
+ul.menu a:hover {
+	color: #BD2E32;
+}
+ul.menu > li.active {
+	font-weight:bold;
+}
+/*
+			Componente: topo
+*/
+ul.actions {
+    text-align: right;
+}
+ul.actions li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+ul.actions li {
+    display: inline;
+}
+
+/*
+			Componente: rodape
+*/
+ul.pagenav{
+    text-align: center;
+}
+
+ul.pagenav li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+ul.pagenav li {
+    display: inline;
+}
+ul.pagenav li a {
+    text-decoration: none;
+	font-weight:bold;
+}
+/*
+			Componente: paginacao
+*/
+div.pagination ul li {
+	list-style-type: none;
+    display: inline;
+}
+div.pagination ul, p.counter {
+    text-align: center;	
+}
