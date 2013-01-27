@@ -1,0 +1,23 @@
+#
+# Package    alligo.snippet.htaccess.bloquear
+# Author     Emerson Rocha Luiz <emerson@webdesign.eng.br>
+# 
+# Since      2013-01-27
+# Copyright  Copyright (C) 2013 Alligo Ltda.
+# License    GNU General Public License version 3. See license.txt
+
+#                Bloqueado para qualquer acesso via navegado.
+# -----------------------------------------------------------------------------
+Order Deny,Allow
+Deny from all
+Allow from 127.0.0.1
+Allow from localhost
+
+#                Bloqueado para qualquer acesso via página não encontrada.
+# @see http://serverfault.com/questions/13068/returning-404-code-for-unauthorized-attempts
+# @note R=404 flag requires at least Apache 2.1.1
+# -----------------------------------------------------------------------------
+RewriteEngine on
+RewriteCond %{REMOTE_ADDR} !=10.0.0.1 [OR]
+RewriteCond %{REMOTE_ADDR} !=10.0.0.1
+RewriteRule .* - [L,R=404]
