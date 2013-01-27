@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Xpto</title>
+    <title>MarcaXpto</title>
     <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="estilo.css" rel="stylesheet">
   </head>
@@ -28,69 +28,73 @@
         <nav class="navbar" role="navigation">
           <div class="navbar-inner">
             <div class="container">
-              
 
-            <!--            <a  class="brand" href="#">Navegação Principal</a>
-                        <h2 class="brand">Navegação Principal</h2>-->
-            <ul class="nav" id="menu-principal">
-              <li class="active"><a href="#">Inicio</a>
-              <li><a href="#">Sobre</a>
-              <li><a href="#">Clientes</a>
-              <li><a href="#">Contato</a>
-            </ul>
-            <form class="navbar-form pull-right" role="search">
-              <input type="text" name="search" placeholder="Pesquisar" id="pesquisar" accesskey="3"/>
-              <button type="submit" class="btn">Busca</button>
-            </form>
+
+              <!-- <a  class="brand" href="#">Navegação Principal</a>>-->
+              <h2 class="brand" style="display:none">Navegação Principal</h2>
+              <ul class="nav" id="menu-principal">
+                <li class="active"><a href="#">Inicio</a>
+                <li><a href="#sobre">Sobre</a>
+                <li><a href="#clientes">Clientes</a>
+                <li><a href="#contato">Contato</a>
+              </ul>
+              <form class="navbar-form pull-right" role="search">
+                <input type="text" name="search" placeholder="Pesquisar" id="pesquisar" accesskey="3"/>
+                <button type="submit" class="btn">Busca</button>
+              </form>
             </div>
           </div>
         </nav>
       </header>
-      <h1>Titulo do site</h1>
-      <article id="conteudo" role="main">
-        <div class="hero-unit">
-          <header>
-            <figure>
-            </figure>
-            <h1>Xpto</h1>
-          </header>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin rutrum faucibus. Aliquam convallis dui ut felis porta tincidunt. Aliquam diam massa, vehicula sit amet iaculis a, dapibus varius elit. Fusce bibendum suscipit eros. Aliquam at lorem sit amet odio lobortis pellentesque. Cras sed sapien lorem. Duis gravida purus non ipsum ultricies pharetra. Donec tempor ipsum at dui bibendum eget interdum tellus tincidunt.
-        </div>
-        <div class="row">
-          <article class="span4">
-            <h2>Subgrupo A</h2>
-            Nulla in vestibulum odio. Morbi sed tellus ante. Praesent pharetra viverra diam vel tempor. Quisque sed dolor in metus venenatis tempus ut vitae metus
-          </article>
-          <article class="span4">
-            <h2>Subgrupo B</h2>
-            Nulla in vestibulum odio. Morbi sed tellus ante. Praesent pharetra viverra diam vel tempor. Quisque sed dolor in metus venenatis tempus ut vitae metus
-          </article>
-          <article class="span4">
-            <h2>Subgrupo C</h2>
-            Nulla in vestibulum odio. Morbi sed tellus ante. Praesent pharetra viverra diam vel tempor. Quisque sed dolor in metus venenatis tempus ut vitae metus
-          </article> 
-        </div>
-
-      </article>
-      <!--      <aside>
-              <section>
-                <h2>Titulo da Lateral A</h2>
-                <label>Busca</label>
-                <input type="text" name="search" id="pesquisar" accesskey="3"/>
-              </section>
-              <section>
-                <h2>Titulo da Lateral B</h2>
-                <ul>
-                  <li>
-                </ul>
-              </section>
-              <section>
-                <h2>Titulo da Lateral C</h2>
-                <ul>
-                  <li>
-                </ul>
-              </section>
-            </aside>-->
+      <div  id="conteudo" role="main">
+        <h1>MarcaXpto</h1>
+        <article>
+          <div class="hero-unit" id="sobre">
+            <header>
+              <figure>
+              </figure>
+              <h1>O que é MarcaXpto</h1>
+            </header>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin rutrum faucibus. Aliquam convallis dui ut felis porta tincidunt. Aliquam diam massa, vehicula sit amet iaculis a, dapibus varius elit. Fusce bibendum suscipit eros. Aliquam at lorem sit amet odio lobortis pellentesque. Cras sed sapien lorem. Duis gravida purus non ipsum ultricies pharetra. Donec tempor ipsum at dui bibendum eget interdum tellus tincidunt.
+          </div>
+          <div class="row">
+            <article class="span4">
+              <h2>Pesquisa</h2>
+              <!--<h3></h3>-->
+              Nulla in vestibulum odio. Morbi sed tellus ante. Praesent pharetra viverra diam vel tempor. Quisque sed dolor in metus venenatis tempus ut vitae metus
+            </article>
+            <article class="span4">
+              <h2>Consultoria</h2>
+              <!--<h3></h3>-->
+              Nulla in vestibulum odio. Morbi sed tellus ante. Praesent pharetra viverra diam vel tempor. Quisque sed dolor in metus venenatis tempus ut vitae metus
+            </article>
+            <article class="span4">
+              <h2>Desenvolvimento</h2>
+              <!--            <h3>Implementação de solicitações internas ou de terceiros</h3>-->
+              Nulla in vestibulum odio. Morbi sed tellus ante. Praesent pharetra viverra diam vel tempor. Quisque sed dolor in metus venenatis tempus ut vitae metus
+            </article> 
+          </div>
+        </article>
+        <hr><!-- Remover HR mais tarde -->
+        <article id="clientes">
+          <h1>Clientes</h1>
+          <h2>Publico Alvo</h2>
+          <p>Governo, instituições de ensino públicas e privadas, agências web interessadas em terceirização,
+            pessoas/empresas indicadas por clientes, ONGs e eventualmente clientes finais.</p>
+          <!-- Melhorar aparência e marcação. Colocar imagens -->
+          <h2>Alguns clientes anteriores</h2>
+          <ul>
+            <li>Governo do Estado do Ceará
+            <li>Universidade Federal do Rio Grande do Sul
+            <li>Universidade do Vale dos Sinos
+            <li>SENAI (Maceió-AL)
+          </ul>
+        </article>
+        <hr><!-- Remover HR mais tarde -->
+        <section id="contato">
+          <h1>Contato</h1>
+        </section>
+      </div>
       <footer role="contentinfo">
         <hr>
         <script src="../../../_biblioteca/dev/print-tools-links.js"></script>
