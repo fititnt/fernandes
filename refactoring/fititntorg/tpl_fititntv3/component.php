@@ -1,12 +1,12 @@
 <?php
-/**
- * @package     Joomla.Administrator
- * @subpackage  Templates.protostar
- *
- * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
 
+/**
+ * @package    alligo.template.fititntv3
+ * @author     Emerson Rocha Luiz <emerson@webdesign.eng.br>
+ * 
+ * @copyright  Copyright (C) 2013 Alligo Ltda.
+ * @license    GNU General Public License version 3. See license.txt
+ */
 defined('_JEXEC') or die;
 
 $app   = JFactory::getApplication();
@@ -29,11 +29,11 @@ JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
 <head>
 <jdoc:include type="head" />
 <!--[if lt IE 9]>
-	<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
+  <script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
 <![endif]-->
 </head>
 <body class="contentpane modal">
-	<jdoc:include type="message" />
-	<jdoc:include type="component" />
+  <jdoc:include type="message" />
+  <jdoc:include type="component" />
 </body>
 </html>
