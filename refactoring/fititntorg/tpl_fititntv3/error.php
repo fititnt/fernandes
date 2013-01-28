@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @package    alligo.template.fititntv3
- * @author     Emerson Rocha Luiz <emerson@webdesign.eng.br>
+ * @package    Alligo.Template.Fititntv3
+ * @author     Emerson Rocha Luiz <emerson@alligo.com.br>
  * 
  * @copyright  Copyright (C) 2013 Alligo Ltda.
  * @license    GNU General Public License version 3. See license.txt

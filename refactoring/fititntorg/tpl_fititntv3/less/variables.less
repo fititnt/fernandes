@@ -38,7 +38,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             #CC0000; //#08c;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -48,13 +48,10 @@
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-/* >>> JUI >>> */
-@baseFontSize:          13px;
-/* <<< JUI <<< */
+// JUI
+@baseFontSize:          15px;
 @baseFontFamily:        @sansFontFamily;
-/* >>> JUI >>> */
-@baseLineHeight:        18px;
-/* <<< JUI <<< */
+@baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
@@ -257,8 +254,8 @@
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 /* >>> JUI >>> */
 // 1200px min
-@gridColumnWidth1200:     60px;
-@gridGutterWidth1200:     20px;
+@gridColumnWidth1200:     70px; //60px;
+@gridGutterWidth1200:     30px; //20px
 @gridRowWidth1200:        (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 // 768px-979px

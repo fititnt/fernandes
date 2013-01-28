@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @package    alligo.template.fititntv3
- * @author     Emerson Rocha Luiz <emerson@webdesign.eng.br>
+ * @package    Alligo.Template.Fititntv3
+ * @author     Emerson Rocha Luiz <emerson@alligo.com.br>
  * 
  * @copyright  Copyright (C) 2013 Alligo Ltda.
  * @license    GNU General Public License version 3. See license.txt
@@ -18,7 +18,7 @@ $this->direction = $doc->direction;
 JHtml::_('bootstrap.framework');
 
 // Add Stylesheets
-$doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
+$doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 
 // Load optional rtl Bootstrap css and Bootstrap bugfixes
 JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);

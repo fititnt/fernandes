@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @package    alligo.template.fititntv3
- * @author     Emerson Rocha Luiz <emerson@webdesign.eng.br>
+ * @package    Alligo.Template.Fititntv3
+ * @author     Emerson Rocha Luiz <emerson@alligo.com.br>
  * 
  * @copyright  Copyright (C) 2013 Alligo Ltda.
  * @license    GNU General Public License version 3. See license.txt
@@ -86,6 +86,7 @@ if ($this->params->get('logoFile')) {
     if ($this->params->get('templateColor')) {
         ?>
         <style type="text/css">
+						/*
             body.site
             {
                 border-top: 3px solid <?php echo $this->params->get('templateColor'); ?>;
@@ -106,6 +107,7 @@ if ($this->params->get('logoFile')) {
                 -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
                 box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
             }
+						*/
         </style>
         <?php
     }
@@ -170,8 +172,14 @@ if ($this->params->get('logoFile')) {
             <div class="container<?php echo ($params->get('fluidContainer') ? ' fluid' : ''); ?>">
                 <hr />
                 <jdoc:include type="modules" name="footer" style="none" />
+								<p class="pull-left">
+								Emerson Rocha Luiz &copy; <?php echo date('Y'); ?><br />
+						    Consultor e programador de extensões Joomla!
+						    <br />
+						    <a href="http://joomla.org" target="_blank">Joomla!</a> | <a href="http://html5.validator.nu/?doc=<?php echo JURI::current(); ?>" target="_blank">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" target="_blank">CSS3</a> </p>
                 <p class="pull-right"><a href="#top" id="back-top"><?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?></a></p>
-                <p>&copy; <?php echo $sitename; ?> <?php echo date('Y'); ?></p>
+								<p class="span12 center">fititnt.org is not affiliated with or endorsed by the Joomla Project or Open Source Matters. The Joomla logo is used under a limited license granted by Open Source Matters	the trademark holder in the United States and other countries<br />
+						<a href="http://www.w3.org/html/logo" target="_blank"><img src="<?php echo $this->baseurl ?>/templates/fititntv3/img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="HTML5 Valid" width="261" height="64"></a></p>
             </div>
         </div>
         <jdoc:include type="modules" name="debug" style="none" />
