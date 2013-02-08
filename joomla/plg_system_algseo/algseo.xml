@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    group="system"
+    type="plugin"
+    version="3.0"
+    method="upgrade">
+	<name>plg_system_algseo</name>
+	<author>Emerson Rocha Luiz</author>
+	<creationDate>Fev 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Alligo LTDA.</copyright>
+	<license>GNU General Public License version 3. See license.txt</license>
+	<authorEmail>emerson@alligo.com.br</authorEmail>
+	<authorUrl>http://www.alligo.com.br</authorUrl>
+	<version>1.0alpha</version>
+	<description>PLG_ALGSEO_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="algseo">algseo.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_algseo.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_algseo.sys.ini</language>
+	</languages>
+  <administration />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="domain" type="url"
+					description="PLG_ALGSEO_DOMAIN_DESCRIPTION"
+					label="PLG_ALGSEO_DOMAIN_LABEL"
+					filter="string"
+					validate="url"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -41,17 +41,15 @@ JHtml::_('bootstrap.framework');
 $user = JFactory::getUser();
 
 
-// Logo file
-if ($params->get('logoFile'))
-{
-	$logo = JURI::root() . $params->get('logoFile');
+// Logo file or site title param
+if ($params->get('logoFile')) {
+    $logo = '<img src="' . JURI::root() . $params->get('logoFile') . '" alt="' . $sitename . '" />';
+} elseif ($params->get('sitetitle')) {
+    $logo = '<span class="site-title" title="' . $sitename . '">' . htmlspecialchars($params->get('sitetitle')) . '</span>';
+} else {
+    $logo = '<span class="site-title" title="' . $sitename . '">' . $sitename . '</span>';
 }
-else
-{
-	$logo = $this->baseurl . "/templates/" . $this->template . "/images/logo.png";
-}
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<title><?php echo $this->title; ?> <?php echo $this->error->getMessage();?></title>
@@ -59,57 +57,10 @@ else
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="language" content="<?php echo $this->language; ?>" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
-	<?php
-	// If Right-to-Left
-	if ($this->direction == 'rtl')
-	{
-	?>
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/media/jui/css/bootstrap-rtl.css" type="text/css" />
-	<?php
-	}
-	// Use of Google Font
-	if ($params->get('googleFont'))
-	{
-	?>
-		<link href='http://fonts.googleapis.com/css?family=<?php echo $params->get('googleFontName');?>' rel='stylesheet' type='text/css'>
-	<?php
-	}
-	?>
-	<link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<?php
-	// Template color
-	if ($params->get('templateColor'))
-	{
-	?>
-	<style type="text/css">
-		body.site
-		{
-			border-top: 3px solid <?php echo $params->get('templateColor');?>;
-			background-color: <?php echo $params->get('templateBackgroundColor');?>
-		}
-		a
-		{
-			color: <?php echo $params->get('templateColor');?>;
-		}
-		.navbar-inner, .nav-list > .active > a, .nav-list > .active > a:hover, .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover
-		{
-			background: <?php echo $params->get('templateColor');?>;
-		}
-		.navbar-inner
-		{
-			-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-			-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-			box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-		}
-	</style>
-	<?php
-	}
-	?>
 	<!--[if lt IE 9]>
 		<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
 	<![endif]-->
 </head>
-
 <body class="site <?php echo $option
 	. ' view-' . $view
 	. ($layout ? ' layout-' . $layout : ' no-layout')
@@ -117,15 +68,16 @@ else
 	. ($itemid ? ' itemid-' . $itemid : '')
 	. ($params->get('fluidContainer') ? ' fluid' : '');
 ?>">
-
-	<!-- Body -->
 	<div class="body">
 		<div class="container<?php echo ($params->get('fluidContainer') ? ' fluid' : '');?>">
-			<!-- Header -->
 			<div class="header">
 				<div class="header-inner clearfix">
 					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
-						<img src="<?php echo $logo;?>" alt="<?php echo $sitename; ?>" />
+						<?php echo $logo; ?> <?php
+						if ($params->get('sitedescription')) {
+								echo '<div class="site-description">' . htmlspecialchars($params->get('sitedescription')) . '</div>';
+						}
+						?>
 					</a>
 					<div class="header-search pull-right">
 						<?php
@@ -155,13 +107,11 @@ else
 				}
 				?>
 			</div>
-			<!-- Banner -->
 			<div class="banner">
 				<jdoc:include type="modules" name="banner" style="xhtml" />
 			</div>
 			<div class="row-fluid">
 				<div id="content" class="span12">
-					<!-- Begin Content -->
 					<h1 class="page-header"><?php echo JText::_('JERROR_LAYOUT_PAGE_NOT_FOUND'); ?></h1>
 					<div class="well">
 						<div class="row-fluid">
@@ -194,12 +144,10 @@ else
 							<span class="label label-inverse"><?php echo $this->error->getCode(); ?></span> <?php echo $this->error->getMessage();?>
 						</blockquote>
 					</div>
-					<!-- End Content -->
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- Footer -->
 	<div class="footer">
 		<div class="container<?php echo ($params->get('fluidContainer') ? ' fluid' : '');?>">
 			<hr />

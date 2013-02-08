@@ -67,54 +67,19 @@ if ($this->params->get('logoFile')) {
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<jdoc:include type="head" />
-    <?php
-// Use of Google Font
-    if ($this->params->get('googleFont')) {
-        ?>
-        <link href='http://fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontName'); ?>' rel='stylesheet' type='text/css' />
-        <style type="text/css">
-            h1,h2,h3,h4,h5,h6,.site-title{
-                font-family: '<?php echo str_replace('+', ' ', $this->params->get('googleFontName')); ?>', sans-serif;
-            }
-        </style>
-        <?php
-    }
-    ?>
-    <?php
-// Template color
-    if ($this->params->get('templateColor')) {
-        ?>
-        <style type="text/css">
-						/*
-            body.site
-            {
-                border-top: 3px solid <?php echo $this->params->get('templateColor'); ?>;
-                background-color: <?php echo $this->params->get('templateBackgroundColor'); ?>
-            }
-            a
-            {
-                color: <?php echo $this->params->get('templateColor'); ?>;
-            }
-            .navbar-inner, .nav-list > .active > a, .nav-list > .active > a:hover, .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover,
-            .btn-primary
-            {
-                background: <?php echo $this->params->get('templateColor'); ?>;
-            }
-            .navbar-inner
-            {
-                -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-                -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-                box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-            }
-						*/
-        </style>
-        <?php
-    }
-    ?>
-    <!--[if lt IE 9]>
-        <script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
-    <![endif]-->
+<jdoc:include type="head" />  <!--[if lt IE 9]><script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script><![endif]-->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-478966-13']);
+    _gaq.push(['_setDomainName', 'www.fititnt.org']);
+    _gaq.push(['_addIgnoredRef', 'www.fititnt.org']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </head>
 <body class="site <?php
         echo $option
@@ -123,33 +88,29 @@ if ($this->params->get('logoFile')) {
         . ($task ? ' task-' . $task : ' no-task')
         . ($itemid ? ' itemid-' . $itemid : '')
         . ($params->get('fluidContainer') ? ' fluid' : '');
-        ?>">
+        ?>" itemscope itemtype="http://schema.org/WebPage">
     <div class="body">
         <div class="container<?php echo ($params->get('fluidContainer') ? ' fluid' : ''); ?>">
             <div class="header">
                 <div class="header-inner clearfix">
-                    <a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
-                        <?php echo $logo; ?> <?php
-                        if ($this->params->get('sitedescription')) {
-                            echo '<div class="site-description">' . htmlspecialchars($this->params->get('sitedescription')) . '</div>';
-                        }
-                        ?>
-                    </a>
-                    <div class="header-search pull-right">
-                        <jdoc:include type="modules" name="position-0" style="none" />
-                    </div>
+                    <h1 class="brand pull-left">
+                      <a href="<?php echo $this->baseurl; ?>">
+                        <img alt="Programador &amp; consultor focado em Web Standards .::. Joomla!, PHP, Javascript, UI/UX" title="<?php echo JText::_('TPL_FITITNTV3_BACK_TO_FRONTPAGE'); ?>" width="150" height="64" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABACAMAAADPuH7iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRF8r+/2UBA/O/vzxAQ0iAg7J+f9c/P1jAw32Bg6Y+P76+v4nBw+d/f3FBQ5oCAzAAA////nO5BRgAAABF0Uk5T/////////////////////wAlrZliAAABkklEQVR42uzZ63aDIAwAYIKAeCnw/k87J7XDoDJYLZyz5FerNHxWBTHMNRmMWMT63yzFGFNtsfgAdg3/1axx+eO1BbuXNXbWhqzw83GYtYW5lSWtbZDFuyZZg02xYkS0JX0kvzzAF+t5tT/G5VZsiOXP4cOd91GF5TOGQxYeIGJWNEDcxfrjBU4sYhErCKn7ZW8HB5P7EcviiPowuAWLkuEW4NP/tDDB7CYkFqHcn2IpgXbzFliqw/sFr8+KVdb21VmTVwm9TFX6dTZlgnVyE71jqmbBv7N1xZ4wUTZAvJc1BWuG3m8a67N2wx2LpJVYsB89e7yxEmveswZ8cdVhPfAKIpX7MyyJWLwN1pya0+uwXJMsIBaxiEUsYhGLWMRqkaXTrLmUpUtYQ/QAHLH86rnn2SycO4O1rWIEAKhjFmzrL4Api4VzZ7Bcd/UOApdCIIuFc+ewTJIVFI4yWaactb07OGcFZbZMFsqdw3Jcp1huFGUslDuzdMq/6ymM8YsmShojSwrLYW6q7BOLWC3ElwADANs3QeEEqCaUAAAAAElFTkSuQmCC"/>
+                      </a>
+                    </h1>
+                    <jdoc:include type="modules" name="position-0" style="semantico" class="header-search pull-right"role="search"/>
                 </div>
             </div>
             <?php if ($this->countModules('position-1')) : ?>
-                <div class="navigation">
-                    <jdoc:include type="modules" name="position-1" style="none" />
+                <div id="menu-principal" class="navigation" role="navigation">
+                    <jdoc:include type="modules" name="position-1" style="semantico" class="nav" tag="nav"/>
                 </div>
             <?php endif; ?>
             <jdoc:include type="modules" name="banner" style="xhtml" />
             <div class="row-fluid">
                 <?php if ($this->countModules('position-8')) : ?>
                     <div id="sidebar" class="span3">
-                        <div class="sidebar-nav">
+                        <div class="sidebar-nav" role="navigation">
                             <jdoc:include type="modules" name="position-8" style="xhtml" />
                         </div>
                     </div>
@@ -157,7 +118,9 @@ if ($this->params->get('logoFile')) {
                 <div id="content" class="<?php echo $span; ?>">
                     <jdoc:include type="modules" name="position-3" style="xhtml" />
                     <jdoc:include type="message" />
+                    <div role="main">
                     <jdoc:include type="component" />
+                    </div>
                     <jdoc:include type="modules" name="position-2" style="none" />
                 </div>
                 <?php if ($this->countModules('position-7')) : ?>
@@ -166,20 +129,36 @@ if ($this->params->get('logoFile')) {
                     </div>
                 <?php endif; ?>
             </div>
+            <nav>
+              <h1 class="hidden">Navegação Complementar</h1>
+              <div class="row-fluid">
+                <div class="span3">
+                <jdoc:include type="modules" name="position-9" style="" />
+                </div>
+                <div class="span3">
+                <jdoc:include type="modules" name="position-10" style="" />
+                </div>
+                <div class="span3">
+                <jdoc:include type="modules" name="position-11" style="" />
+                </div>
+                <div class="span3">
+                <jdoc:include type="modules" name="position-12" style="" />
+                </div>
+              </div>
+            </nav>
+            <footer class="footer" role="contentinfo">
+              Emerson Rocha Luiz &copy; <?php echo date('Y'); ?><br />
+              Consultor e programador de extensões Joomla!<br />
+              <a href="http://joomla.org" target="_blank">Joomla!</a> | <a href="http://html5.validator.nu/?doc=<?php echo JURI::current(); ?>" target="_blank">HTML5</a> <!--| <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" target="_blank">CSS3</a></p>//Twitter boostrap ferrando com meu CSS :( --> 
+            </footer>
         </div>
     </div>
-        <div class="footer">
+        <div>
             <div class="container<?php echo ($params->get('fluidContainer') ? ' fluid' : ''); ?>">
                 <hr />
                 <jdoc:include type="modules" name="footer" style="none" />
-								<p class="pull-left">
-								Emerson Rocha Luiz &copy; <?php echo date('Y'); ?><br />
-						    Consultor e programador de extensões Joomla!
-						    <br />
-						    <a href="http://joomla.org" target="_blank">Joomla!</a> | <a href="http://html5.validator.nu/?doc=<?php echo JURI::current(); ?>" target="_blank">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" target="_blank">CSS3</a> </p>
-                <p class="pull-right"><a href="#top" id="back-top"><?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?></a></p>
-								<p class="span12 center">fititnt.org is not affiliated with or endorsed by the Joomla Project or Open Source Matters. The Joomla logo is used under a limited license granted by Open Source Matters	the trademark holder in the United States and other countries<br />
-						<a href="http://www.w3.org/html/logo" target="_blank"><img src="<?php echo $this->baseurl ?>/templates/fititntv3/img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="HTML5 Valid" width="261" height="64"></a></p>
+                <p class="span12 center">fititnt.org is not affiliated with or endorsed by the Joomla Project or Open Source Matters. The Joomla logo is used under a limited license granted by Open Source Matters	the trademark holder in the United States and other countries<br />
+                <a href="http://www.w3.org/html/logo" target="_blank"><img src="<?php echo $this->baseurl ?>/templates/fititntv3/img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="HTML5 Valid" width="261" height="64"></a></p>
             </div>
         </div>
         <jdoc:include type="modules" name="debug" style="none" />
