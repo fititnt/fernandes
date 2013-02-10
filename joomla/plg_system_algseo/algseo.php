@@ -64,10 +64,9 @@ class plgSystemAlgseo extends JPlugin {
 				//$this->url = JURI::current(true);
 				//$this->url = JURI::base();
 
-
-
 				$this->canonical_regex = array(
-						'#^17-artigos/*#' => ''
+						'#^17-artigos/*#' => '',
+						'#(.*)-post(.*)#' => ''
 				);
 				$this->redirect_regex = array(
 						'#^17-artigos/*#' => '',
@@ -75,7 +74,8 @@ class plgSystemAlgseo extends JPlugin {
 				);
 
 				$this->robots_regex = array(
-						'#(.*)-post(.*)#' => 'noindex, follow'
+						'#(.*)-post(.*)#' => 'noindex, follow',
+						'#^17-artigos/*#' => 'noindex, follow'
 				);
 		}
 
@@ -88,6 +88,26 @@ class plgSystemAlgseo extends JPlugin {
 		public function onAfterDispatch() {
 				$app = JFactory::getApplication();
 
+
+				//////////////////////////////////  Robots   ///////////////////////////////////////////
+				$robots_info = array();
+				$robots_info['url'] = $this->url_full;
+				foreach ($this->robots_regex AS $k => $v) {
+						if (preg_match($k, $this->url, $matches)) {
+
+								if (isset($this->doc->_metaTags['standard']['robots'])) {
+										$robots_info['robots_old'] = $this->doc->_metaTags['standard']['robots'];
+								}
+								$this->doc->_metaTags['standard']['robots'] = $v;
+								$robots_info['robots'] = $v;
+
+								JLog::add(str_replace('\/', '/', json_encode($robots_info)), JLog::NOTICE, 'robots');
+
+								continue;
+						}
+						// print_r(json_encode(array($k, $this->url, $matches)));die;
+				}
+
 				////////////////////////////////// Canonical ///////////////////////////////////////////
 				$canonical_info = array();
 				$canonical_info['url'] = $this->url_full;
@@ -97,7 +117,7 @@ class plgSystemAlgseo extends JPlugin {
 				if ($app->getMenu()->getActive() === $app->getMenu()->getDefault()) {
 						// Remove canonicas, caso existam
 						foreach ($this->doc->_links AS $k => $v) {
-								if (isset($this->doc->_links[$k]['relation']) && strtolower($this->doc->_links[$k]['relation']) === 'canonical') {
+								if (isset($this->doc->_links[$k]['relation']) && strtolower($this->doc->_links[$k]['relation']) == 'canonical') {
 										$canonical_info['canonical_old'] = $k;
 										unset($this->doc->_links[$k]);
 								}
@@ -115,7 +135,35 @@ class plgSystemAlgseo extends JPlugin {
 						$this->doc->addHeadLink($uri->toString(), 'canonical', 'rel');
 						$canonical_info['canonical'] = $uri->toString();
 						//print_r($this->doc);
+				} else {
+						// ... E se não for página inicial, entra no regex
+						foreach ($this->canonical_regex AS $k => $v) {
+								if (preg_match($k, $this->url, $matches)) {
+
+										foreach ($this->doc->_links AS $link => $v2) {
+												if (isset($this->doc->_links[$link]['relation']) && strtolower($this->doc->_links[$link]['relation']) == 'canonical') {
+														unset($this->doc->_links[$link]);
+														$canonical_info['canonical_old'] = $link;
+												}
+										}
+
+										//print_r($this->doc->_links);die;
+										// @todo resolver para $v = '/'
+										if (strpos($v, 'h') !== 0) {
+												$new_url = JURI::base() . $v;
+										} else {
+												$new_url = (strpos($new_url, '/') === 0 ? substr($new_url, 1) : $new_url);
+										}
+
+										$this->doc->addHeadLink($new_url, 'canonical', 'rel');
+										$canonical_info['canonical'] = $new_url;
+										continue;
+								}
+								// print_r(json_encode(array($k, $this->url, $matches)));die;
+						}
 				}
+
+				JLog::add(str_replace('\/', '/', json_encode($robots_info)), JLog::NOTICE, 'robots');
 		}
 
 		/**
@@ -172,52 +220,8 @@ class plgSystemAlgseo extends JPlugin {
 				if ($app->getName() != 'site' || $app->getCfg('sef') == '0') {
 						return true;
 				}
-				print_r(__FILE__ . PHP_EOL);
-				//////////////////////////////////  Robots   ///////////////////////////////////////////
-				$robots_info = array();
-				$robots_info['url'] = $this->url_full;
-				foreach ($this->robots_regex AS $k => $v) {
-						if (preg_match($k, $this->url, $matches)) {
-
-								if (isset($this->doc->_metaTags['standard']['robots'])) {
-										$robots_info['robots_old'] = $this->doc->_metaTags['standard']['robots'];
-								}
-								$this->doc->_metaTags['standard']['robots'] = $v;
-								$robots_info['robots'] = $v;
-
-								JLog::add(str_replace('\/', '/', json_encode($robots_info)), JLog::NOTICE, 'robots');
-
-								continue;
-						}
-						// print_r(json_encode(array($k, $this->url, $matches)));die;
-				}
 
 
-//				foreach ($this->canonical_regex AS $k => $v) {;
-//						if (preg_match($k, $this->url, $matches)) {
-//
-//								foreach ($this->doc->_links AS $k => $v) {
-//										if (isset($this->doc->_links[$k]['relation']) && strtolower($this->doc->_links[$k]['relation']) === 'canonical') {
-//												$canonical_info['canonical_old'] = $k;
-//												unset($this->doc->_links[$k]);
-//										}
-//								}
-//								$this->doc->_metaTags['standard']['robots'] = $v;
-//								$robots_info['robots'] = $v;
-//
-//								JLog::add(str_replace('\/', '/', json_encode($robots_info)), JLog::NOTICE, 'robots');
-//
-//								continue;
-//						}
-//						// print_r(json_encode(array($k, $this->url, $matches)));die;
-//				}
-
-
-				JLog::add(str_replace('\/', '/', json_encode($canonical_info)), JLog::DEBUG, 'canonical');
-
-				//unset($this);
-				//print_r('');
-				//die;
 				////////////////////////////////// Debug geral ///////////////////////////////////////////
 				$debug_info = array();
 				$debug_info['url'] = $this->url_full;
