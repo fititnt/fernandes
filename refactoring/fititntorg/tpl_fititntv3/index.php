@@ -37,6 +37,28 @@ JHtml::_('bootstrap.framework');
 // Add Stylesheets
 $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 
+// SEO
+/*
+if ($app->getMenu()->getActive() === $app->getMenu()->getDefault()) {
+  // Remove canonicas, caso existam
+  foreach($doc->_links AS $k => $v) {
+	if (isset($doc->_links[$k]['relation']) && strtolower($doc->_links[$k]['relation']) === 'canonical') {
+		unset($doc->_links[$k]);
+	}
+  }
+  $uri = JURI::getInstance();
+  $uri->delVar('type');
+  $uri->delVar('start');
+  $uri->delVar('do_pdf');
+  $uri->delVar('limitstart');
+  $uri->delVar('layout');
+  $uri->delVar('format');
+  //JURI::root();
+  $doc->addHeadLink( $uri->toString(), 'canonical', 'rel');
+}
+//print_r($doc);
+*/
+
 // Load optional rtl Bootstrap css and Bootstrap bugfixes
 JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
 
@@ -98,7 +120,7 @@ if ($this->params->get('logoFile')) {
                         <img alt="Programador &amp; consultor focado em Web Standards .::. Joomla!, PHP, Javascript, UI/UX" title="<?php echo JText::_('TPL_FITITNTV3_BACK_TO_FRONTPAGE'); ?>" width="150" height="64" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABACAMAAADPuH7iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRF8r+/2UBA/O/vzxAQ0iAg7J+f9c/P1jAw32Bg6Y+P76+v4nBw+d/f3FBQ5oCAzAAA////nO5BRgAAABF0Uk5T/////////////////////wAlrZliAAABkklEQVR42uzZ63aDIAwAYIKAeCnw/k87J7XDoDJYLZyz5FerNHxWBTHMNRmMWMT63yzFGFNtsfgAdg3/1axx+eO1BbuXNXbWhqzw83GYtYW5lSWtbZDFuyZZg02xYkS0JX0kvzzAF+t5tT/G5VZsiOXP4cOd91GF5TOGQxYeIGJWNEDcxfrjBU4sYhErCKn7ZW8HB5P7EcviiPowuAWLkuEW4NP/tDDB7CYkFqHcn2IpgXbzFliqw/sFr8+KVdb21VmTVwm9TFX6dTZlgnVyE71jqmbBv7N1xZ4wUTZAvJc1BWuG3m8a67N2wx2LpJVYsB89e7yxEmveswZ8cdVhPfAKIpX7MyyJWLwN1pya0+uwXJMsIBaxiEUsYhGLWMRqkaXTrLmUpUtYQ/QAHLH86rnn2SycO4O1rWIEAKhjFmzrL4Api4VzZ7Bcd/UOApdCIIuFc+ewTJIVFI4yWaactb07OGcFZbZMFsqdw3Jcp1huFGUslDuzdMq/6ymM8YsmShojSwrLYW6q7BOLWC3ElwADANs3QeEEqCaUAAAAAElFTkSuQmCC"/>
                       </a>
                     </h1>
-                    <jdoc:include type="modules" name="position-0" style="semantico" class="header-search pull-right"role="search"/>
+                    <jdoc:include type="modules" name="position-0" style="semantico" class="header-search pull-right" role="search"/>
                 </div>
             </div>
             <?php if ($this->countModules('position-1')) : ?>
@@ -149,7 +171,7 @@ if ($this->params->get('logoFile')) {
             <footer class="footer" role="contentinfo">
               Emerson Rocha Luiz &copy; <?php echo date('Y'); ?><br />
               Consultor e programador de extensões Joomla!<br />
-              <a href="http://joomla.org" target="_blank">Joomla!</a> | <a href="http://html5.validator.nu/?doc=<?php echo JURI::current(); ?>" target="_blank">HTML5</a> <!--| <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" target="_blank">CSS3</a></p>//Twitter boostrap ferrando com meu CSS :( --> 
+              <a href="http://joomla.org" target="_blank">Joomla!</a> | <a href="http://html5.validator.nu/?doc=<?php echo JURI::current(); ?>" target="_blank" title="HTML5 Valid">HTML5</a> <!--| <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" target="_blank">CSS3</a></p>//Twitter boostrap ferrando com meu CSS :( --> 
             </footer>
         </div>
     </div>
