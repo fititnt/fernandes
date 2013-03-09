@@ -184,5 +184,6 @@ if ($this->params->get('logoFile')) {
             </div>
         </div>
         <jdoc:include type="modules" name="debug" style="none" />
+				<noscript>Javascript desativado. E daí? Faz tanta diferença para você neste site?</noscript>
     </body>
 </html>

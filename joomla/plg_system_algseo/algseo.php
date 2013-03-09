@@ -44,7 +44,8 @@ class plgSystemAlgseo extends JPlugin {
 				JLog::addLogger(
 								array(
 						'text_file' => 'algseo.php',
-								//'text_entry_format' => '{"{datetime}":"{DATETIME}", "IP":"{CLIENTIP}", "category":"{CATEGORY}", "message": {MESSAGE}}'
+						//'text_entry_format' => '{"{datetime}":"{DATETIME}", "IP":"{CLIENTIP}", "category":"{CATEGORY}", "message": {MESSAGE}}'
+						'text_entry_format' => '{DATETIME}	{CLIENTIP}	{CATEGORY}	{MESSAGE}'
 								), JLog::ALL ^ JLog::DEBUG
 								//, 'redirect'
 				);
@@ -52,7 +53,8 @@ class plgSystemAlgseo extends JPlugin {
 				JLog::addLogger(
 								array(
 						'text_file' => 'algseo.debug.php',
-								//'text_entry_format' => '{"{datetime}":"{DATETIME}", "IP":"{CLIENTIP}", "category":"{CATEGORY}", "message": {MESSAGE}}' 
+						//'text_entry_format' => '{"{datetime}":"{DATETIME}", "IP":"{CLIENTIP}", "category":"{CATEGORY}", "message": {MESSAGE}}' 
+						'text_entry_format' => '{DATETIME}	{CLIENTIP}	{CATEGORY}	{MESSAGE}'
 								), JLog::DEBUG
 								//, 'access'
 				);
@@ -75,7 +77,9 @@ class plgSystemAlgseo extends JPlugin {
 
 				$this->robots_regex = array(
 						'#(.*)-post(.*)#' => 'noindex, follow',
-						'#^17-artigos/*#' => 'noindex, follow'
+						'#^17-artigos/*#' => 'noindex, follow',
+						'#(.*)type=rss$#' => 'noindex, follow',
+						'#(.*)type=atom$#' => 'noindex, follow'
 				);
 		}
 
@@ -240,6 +244,7 @@ class plgSystemAlgseo extends JPlugin {
 				$browser = JBrowser::getInstance();
 
 				$debug_info['platform'] = $browser->getBrowser() . ', ' . $browser->getMajor() . ', ' . $browser->getPlatform();
+				$debug_info['referer'] = htmlspecialchars($_SERVER['HTTP_REFERER']);
 
 				//print_r($debug_info);
 				//print_r($doc->_metaTags);die;
